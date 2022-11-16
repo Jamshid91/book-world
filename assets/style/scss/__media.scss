@@ -299,7 +299,15 @@
         &-list {
             margin-right: 0;
         }
-    
+        .header-logo__title {
+            font-size: 20px;
+            line-height: 24px;
+            text-align-last: left;
+        }
+        .header-logo__title-sub {
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
 }
 

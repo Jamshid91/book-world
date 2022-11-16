@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="../../assets/img/png/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/style/plugins/bootstrap.css">
+    <link rel="stylesheet" href="../assets/style/plugins/swiper.css">
+    <link rel="stylesheet" href="../assets/style/css/main.css">
+</head>
+<body>
+    <header class="header w-100 position-fixed">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-none d-lg-flex align-items-center justify-content-between">
+                    <div class="w-25">
+                        <a href="#" class="header__my-library d-flex justify-content-center align-items-center w-auto transition hover-bg">
+                            <svg class="me-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_46906_1)">
+                                <rect x="1" y="1" width="4" height="16" stroke="black" stroke-linejoin="round"/>
+                                <rect x="7" y="4" width="3" height="13" stroke="black" stroke-linejoin="round"/>
+                                <rect x="11.5273" y="8.28711" width="2.31824" height="9.14113" transform="rotate(-20 11.5273 8.28711)" stroke="black" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.35566 4C2.55209 4 2.71132 4.16842 2.71132 4.37618V8.51417C2.71132 8.72193 2.55209 8.89035 2.35566 8.89035C2.15924 8.89035 2 8.72193 2 8.51417V4.37618C2 4.16842 2.15924 4 2.35566 4ZM3.60048 4C3.7969 4 3.95614 4.16842 3.95614 4.37618V6.82136C3.95614 7.02911 3.7969 7.19754 3.60048 7.19754C3.40405 7.19754 3.24482 7.02911 3.24482 6.82136V4.37618C3.24482 4.16842 3.40405 4 3.60048 4Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.39123 11.8682C2.17516 11.8682 2 11.9692 2 12.0939V14.5767C2 14.7013 2.17516 14.8024 2.39123 14.8024H3.56491C3.78098 14.8024 3.95614 14.7013 3.95614 14.5767V12.0939C3.95614 11.9692 3.78098 11.8682 3.56491 11.8682H2.39123Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_46906_1">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            Моя библиотека
+                        </a>
+                    </div>
+                    <div class="w-75 d-flex align-items-center justify-content-between">
+                        <ul class="d-flex justify-content-between">
+                            <li class="header-list"><a href="#">Книги</a></li>
+                            <li class="header-list"><a href="#">Жанры</a></li>
+                        </ul>
+                        <div class="header-logo d-flex justify-content-center">
+                            <a href="../index.html" class="d-flex align-items-center">
+                                <img loading="lazy" src="../assets/img/png/logo.png" alt="logo.png" class="me-2">
+                                <div class="">
+                                    <p class="header-logo__title">Книжный мир</p>
+                                    <p class="header-logo__title-sub">Здесь находятся все книги!</p>
+                                </div>
+                            </a>
+                        </div>
+                        <ul class="d-flex justify-content-between">
+                            <li class="header-list"><a href="#">Аудиокниги</a></li>
+                            <li class="header-list"><a href="#">Топ книг</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-25 d-flex justify-content-end align-items-center">
+                        <button class="header-search__btn me-2">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                <circle cx="6.90459" cy="6.90459" r="6.40459" stroke="black"/>
+                                <path d="M11.668 11.6665L15.0012 14.9998" stroke="black"/>
+                                </g>
+                            </svg>
+                        </button>
+                        <a href="#" class="header__signUp d-flex align-items-center justify-content-center w-auto transition">
+                            <svg class="me-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_46885_2)">
+                                <circle cx="9.16287" cy="5.2449" r="4.2449" stroke="black"/>
+                                <path d="M1 14.6735V14.037C1 13.2033 1.25202 12.3798 1.84551 11.7943C2.41892 11.2286 3.25534 10.5469 4.26531 10.1429C6.22449 9.35923 9.16327 9.48985 9.16327 9.48985C9.16327 9.48985 12.4483 9.42764 13.9655 10.1429C14.618 10.4505 15.2704 10.9766 15.8022 11.4764C16.6294 12.2538 17 13.3736 17 14.5088V14.6735C17 15.7781 16.1046 16.6735 15 16.6735H3C1.89543 16.6735 1 15.7781 1 14.6735Z" stroke="black" stroke-linecap="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_46885_2">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            Войти
+                        </a>
+
+                        <!-- после регистрации -->
+                        <a href="#" class="header__user d-none align-items-center transition w-auto">
+                            <img loading="lazy" src="../assets/img/png/user.png" alt="" class="header__user-img rounded-circle me-2">
+                            <div class="d-flex">
+                                <span class="header__user-name me-1">Еремина</span>
+                                <span class="header__user-last-name">Екатерина</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-12 d-lg-none d-flex align-items-center justify-content-between">    
+                    <div class="header-burger d-flex d-xl-none align-items-start justify-content-start">
+                        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1.625C0 1.02734 0.492188 0.5 1.125 0.5H14.625C15.2227 0.5 15.75 1.02734 15.75 1.625C15.75 2.25781 15.2227 2.75 14.625 2.75H1.125C0.492188 2.75 0 2.25781 0 1.625ZM2.25 7.25C2.25 6.65234 2.74219 6.125 3.375 6.125H16.875C17.4727 6.125 18 6.65234 18 7.25C18 7.88281 17.4727 8.375 16.875 8.375H3.375C2.74219 8.375 2.25 7.88281 2.25 7.25ZM14.625 14H1.125C0.492188 14 0 13.5078 0 12.875C0 12.2773 0.492188 11.75 1.125 11.75H14.625C15.2227 11.75 15.75 12.2773 15.75 12.875C15.75 13.5078 15.2227 14 14.625 14Z" fill="#A0AEBF"/>
+                        </svg>
+                    </div>
+                    <div class="header-logo d-flex justify-content-center">
+                        <a href="../index.html" class="d-flex align-items-center">
+                            <img loading="lazy" src="../assets/img/png/logo.png" alt="logo.png" class="me-1">
+                            <div class="">
+                                <p class="header-logo__title">Книжный мир</p>
+                                <p class="header-logo__title-sub">Здесь находятся все книги!</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="header-right d-flex align-items-center justify-content-end">
+                        <button class="header-search__btn me-2">
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                <circle cx="6.90459" cy="6.90459" r="6.40459" stroke="black"/>
+                                <path d="M11.668 11.6665L15.0012 14.9998" stroke="black"/>
+                                </g>
+                            </svg>
+                        </button>
+                        <a href="#" class="header__signUp d-flex align-items-center justify-content-center w-auto transition">
+                            <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_46885_4)">
+                                <circle cx="9.16287" cy="5.2449" r="4.2449" stroke="black"/>
+                                <path d="M1 14.6735V14.037C1 13.2033 1.25202 12.3798 1.84551 11.7943C2.41892 11.2286 3.25534 10.5469 4.26531 10.1429C6.22449 9.35923 9.16327 9.48985 9.16327 9.48985C9.16327 9.48985 12.4483 9.42764 13.9655 10.1429C14.618 10.4505 15.2704 10.9766 15.8022 11.4764C16.6294 12.2538 17 13.3736 17 14.5088V14.6735C17 15.7781 16.1046 16.6735 15 16.6735H3C1.89543 16.6735 1 15.7781 1 14.6735Z" stroke="black" stroke-linecap="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_46885_4">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        
+                        <!-- после регистрации -->
+                        <a href="#" class="header__user d-none align-items-center transition w-auto">
+                            <img loading="lazy" src="../assets/img/png/user.png" alt="" class="header__user-img rounded-circle">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row d-none justify-content-center mt-4">
+                <div class="col-lg-8 position-relative">
+                    <div class="header-search position-absolute top-0 px-3 d-flex align-items-center justify-content-between">
+                        <div class="w-50 h-100">
+                            <input type="text" class="header-search__inp w-100 h-100" placeholder="Поиск по книгам">
+                        </div>
+                        <div class="line"></div>
+                        <a href="#" class="header-search-author">Автор</a>
+                        <a href="#" class="header-search-publishing-house">Издательство</a>
+                        <a href="#" class="header-search-language">Язык</a>
+                        <button class="header-search__btn">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                <circle cx="6.90459" cy="6.90459" r="6.40459" stroke="black"/>
+                                <path d="M11.668 11.6665L15.0012 14.9998" stroke="black"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-close">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 1L1 15M15 15L1 1" stroke="#797979"/>
+            </svg>
+        </div>
+        <div class="menu-item">
+            <ul class="d-flex justify-content-between align-items-center flex-column">
+                <li class="header-list"><a href="#">Книги</a></li>
+                <li class="header-list"><a href="#">Жанры</a></li>
+                <li class="header-list"><a href="#">Аудиокниги</a></li>
+                <li class="header-list"><a href="#">Топ книг</a></li>
+            </ul>
+            
+            <a href="#" class="header__my-library d-flex justify-content-center align-items-center w-auto transition hover-bg">
+                <svg class="me-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_46906_5)">
+                    <rect x="1" y="1" width="4" height="16" stroke="black" stroke-linejoin="round"/>
+                    <rect x="7" y="4" width="3" height="13" stroke="black" stroke-linejoin="round"/>
+                    <rect x="11.5273" y="8.28711" width="2.31824" height="9.14113" transform="rotate(-20 11.5273 8.28711)" stroke="black" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.35566 4C2.55209 4 2.71132 4.16842 2.71132 4.37618V8.51417C2.71132 8.72193 2.55209 8.89035 2.35566 8.89035C2.15924 8.89035 2 8.72193 2 8.51417V4.37618C2 4.16842 2.15924 4 2.35566 4ZM3.60048 4C3.7969 4 3.95614 4.16842 3.95614 4.37618V6.82136C3.95614 7.02911 3.7969 7.19754 3.60048 7.19754C3.40405 7.19754 3.24482 7.02911 3.24482 6.82136V4.37618C3.24482 4.16842 3.40405 4 3.60048 4Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.39123 11.8682C2.17516 11.8682 2 11.9692 2 12.0939V14.5767C2 14.7013 2.17516 14.8024 2.39123 14.8024H3.56491C3.78098 14.8024 3.95614 14.7013 3.95614 14.5767V12.0939C3.95614 11.9692 3.78098 11.8682 3.56491 11.8682H2.39123Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_1_46906_5">
+                    <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                Моя библиотека
+            </a>
+        </div>
+    </div>
+    
+    <div class="search">
+        <div class="container">
+            <div class="row search-row d-flex justify-content-center">
+                <div class="col-12">
+                    <div class="header-search">
+                        <div class="border w-100 h-100 d-flex align-items-center justify-content-between">
+                            <div class="search-title h-100 position-relative">
+                                <input type="text" class="search__inp w-100 h-100" placeholder="Поиск по книгам">
+                                <div class="clear-search bg-transparent d-none">
+                                    <svg class="me-1" width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 1L1 15M15 15L1 1" stroke="#797979"/>
+                                    </svg>
+                                    Очистить
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <a href="#" class="header-search-author d-none d-lg-flex">Автор</a>
+                            <a href="#" class="header-search-publishing-house d-none d-lg-block">Издательство</a>
+                            <a href="#" class="header-search-language d-none d-lg-block">Язык</a>
+                            <div class="header-search__close">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 1L1 15M15 15L1 1" stroke="#797979"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center mt-1 d-lg-none">
+                            <a href="#" class="header-search-author d-flex">Автор</a>
+                            <a href="#" class="header-search-publishing-house">Издательство</a>
+                            <a href="#" class="header-search-language">Язык</a>
+                        </div>
+                    </div>
+                    <div class="search-result">
+                        <span class="search-result__text">Что Вы ищете?</span>
+                        <span class="noResults">Нет результатов</span>
+                        <ul class="search-item">
+                            <li>
+                               <div class="d-flex search-result-left">
+                                    <img loading="lazy" src="../assets/img/png/p1.png" alt="" class="search-result__img">
+                                    <div class="">
+                                        <a href="#" class="search-result__title stretched-link">Паника</a>
+                                        <p class="search-result__author">Лорен Оливер</p>
+                                        <p class="search-result__type">Современная зарубежная литература / Книги для подростков</p>
+                                    </div>
+                               </div>
+                               <div class="search-item-info d-flex justify-content-end align-items-center">
+                                <span class="">5 изданий</span>
+                                <span class="mx-3">|</span>
+                                <span class="me-3">
+                                    <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                        <path d="M0.119991 5.68313C0.290607 5.49 4.36104 0.954102 9.5 0.954102C14.639 0.954102 18.7096 5.49016 18.88 5.68313C19.04 5.8641 19.04 6.13584 18.88 6.31664C18.7094 6.50977 14.639 11.0457 9.5 11.0457C4.36104 11.0457 0.290407 6.50961 0.119991 6.31664C-0.039999 6.13581 -0.039999 5.86393 0.119991 5.68313ZM9.5 10.0896C13.4514 10.0896 16.8511 7.01008 17.8604 5.99962C16.8527 4.98851 13.4589 1.91 9.5 1.91C5.54858 1.91 2.14887 4.98951 1.13962 5.99997C2.14725 7.01108 5.54106 10.0896 9.5 10.0896Z" fill="black"/>
+                                        <path d="M12.8633 6.00005C12.8633 7.85432 11.3547 9.36289 9.50044 9.36289C7.64617 9.36289 6.1376 7.85432 6.1376 6.00005C6.1376 4.14578 7.64617 2.63721 9.50044 2.63721C11.3547 2.63721 12.8633 4.14578 12.8633 6.00005ZM7.09386 6.00005C7.09386 7.32692 8.17349 8.40673 9.50055 8.40673C10.8276 8.40673 11.9072 7.32696 11.9072 6.00005C11.9072 4.67313 10.8275 3.59336 9.50055 3.59336C8.17364 3.59336 7.09386 4.67313 7.09386 6.00005Z" fill="black"/>
+                                        </g>
+                                    </svg>
+                                    1234
+                                </span>
+                                <span class="">
+                                    <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.3" d="M7.85187 1.6203L9.5 3.23921L11.1481 1.62031C12.629 0.16565 15.0024 0.165666 16.4833 1.62034C17.9031 3.01505 18.0108 5.27002 16.6587 6.7305C15.9023 7.54762 15.0517 8.43013 14.25 9.18182C12.7323 10.6049 9.5 13 9.5 13C9.5 13 6.26772 10.6049 4.75 9.18182C3.9483 8.43012 3.09773 7.5476 2.34124 6.73047C0.98916 5.27 1.0969 3.01503 2.51673 1.62033C3.99763 0.165646 6.37096 0.165634 7.85187 1.6203Z" stroke="black"/>
+                                    </svg>
+                                    3406878
+                                </span>
+                               </div>
+                            </li>
+                            <li>
+                               <div class="d-flex search-result-left">
+                                    <img loading="lazy" src="../assets/img/png/p2.png" alt="" class="search-result__img">
+                                    <div class="">
+                                        <a href="#" class="search-result__title stretched-link">Паника. Как знание о работе мозга помогут навсегда победить страх и панические атаки</a>
+                                        <p class="search-result__author">Клаус Бернхардт</p>
+                                        <p class="search-result__type">Книги по психологии</p>
+                                    </div>
+                               </div>
+                               <div class="search-item-info d-flex justify-content-end align-items-center">
+                                <span class="">5 изданий</span>
+                                <span class="mx-3">|</span>
+                                <span class="me-3">
+                                    <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                        <path d="M0.119991 5.68313C0.290607 5.49 4.36104 0.954102 9.5 0.954102C14.639 0.954102 18.7096 5.49016 18.88 5.68313C19.04 5.8641 19.04 6.13584 18.88 6.31664C18.7094 6.50977 14.639 11.0457 9.5 11.0457C4.36104 11.0457 0.290407 6.50961 0.119991 6.31664C-0.039999 6.13581 -0.039999 5.86393 0.119991 5.68313ZM9.5 10.0896C13.4514 10.0896 16.8511 7.01008 17.8604 5.99962C16.8527 4.98851 13.4589 1.91 9.5 1.91C5.54858 1.91 2.14887 4.98951 1.13962 5.99997C2.14725 7.01108 5.54106 10.0896 9.5 10.0896Z" fill="black"/>
+                                        <path d="M12.8633 6.00005C12.8633 7.85432 11.3547 9.36289 9.50044 9.36289C7.64617 9.36289 6.1376 7.85432 6.1376 6.00005C6.1376 4.14578 7.64617 2.63721 9.50044 2.63721C11.3547 2.63721 12.8633 4.14578 12.8633 6.00005ZM7.09386 6.00005C7.09386 7.32692 8.17349 8.40673 9.50055 8.40673C10.8276 8.40673 11.9072 7.32696 11.9072 6.00005C11.9072 4.67313 10.8275 3.59336 9.50055 3.59336C8.17364 3.59336 7.09386 4.67313 7.09386 6.00005Z" fill="black"/>
+                                        </g>
+                                    </svg>
+                                    1234
+                                </span>
+                                <span class="">
+                                    <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.3" d="M7.85187 1.6203L9.5 3.23921L11.1481 1.62031C12.629 0.16565 15.0024 0.165666 16.4833 1.62034C17.9031 3.01505 18.0108 5.27002 16.6587 6.7305C15.9023 7.54762 15.0517 8.43013 14.25 9.18182C12.7323 10.6049 9.5 13 9.5 13C9.5 13 6.26772 10.6049 4.75 9.18182C3.9483 8.43012 3.09773 7.5476 2.34124 6.73047C0.98916 5.27 1.0969 3.01503 2.51673 1.62033C3.99763 0.165646 6.37096 0.165634 7.85187 1.6203Z" stroke="black"/>
+                                    </svg>
+                                    3406878
+                                </span>
+                               </div>
+                            </li>
+                            <li>
+                               <div class="d-flex search-result-left">
+                                    <img loading="lazy" src="../assets/img/png/p3.png" alt="" class="search-result__img">
+                                    <div class="">
+                                        <a href="#" class="search-result__title stretched-link">Царство.Паника</a>
+                                        <p class="search-result__author">Лили Блейк</p>
+                                        <p class="search-result__type">Исторические приключения</p>
+                                    </div>
+                               </div>
+                               <div class="search-item-info d-flex justify-content-end align-items-center">
+                                <span class="">5 изданий</span>
+                                <span class="mx-3">|</span>
+                                <span class="me-3">
+                                    <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.5">
+                                        <path d="M0.119991 5.68313C0.290607 5.49 4.36104 0.954102 9.5 0.954102C14.639 0.954102 18.7096 5.49016 18.88 5.68313C19.04 5.8641 19.04 6.13584 18.88 6.31664C18.7094 6.50977 14.639 11.0457 9.5 11.0457C4.36104 11.0457 0.290407 6.50961 0.119991 6.31664C-0.039999 6.13581 -0.039999 5.86393 0.119991 5.68313ZM9.5 10.0896C13.4514 10.0896 16.8511 7.01008 17.8604 5.99962C16.8527 4.98851 13.4589 1.91 9.5 1.91C5.54858 1.91 2.14887 4.98951 1.13962 5.99997C2.14725 7.01108 5.54106 10.0896 9.5 10.0896Z" fill="black"/>
+                                        <path d="M12.8633 6.00005C12.8633 7.85432 11.3547 9.36289 9.50044 9.36289C7.64617 9.36289 6.1376 7.85432 6.1376 6.00005C6.1376 4.14578 7.64617 2.63721 9.50044 2.63721C11.3547 2.63721 12.8633 4.14578 12.8633 6.00005ZM7.09386 6.00005C7.09386 7.32692 8.17349 8.40673 9.50055 8.40673C10.8276 8.40673 11.9072 7.32696 11.9072 6.00005C11.9072 4.67313 10.8275 3.59336 9.50055 3.59336C8.17364 3.59336 7.09386 4.67313 7.09386 6.00005Z" fill="black"/>
+                                        </g>
+                                    </svg>
+                                    1234
+                                </span>
+                                <span class="">
+                                    <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path opacity="0.3" d="M7.85187 1.6203L9.5 3.23921L11.1481 1.62031C12.629 0.16565 15.0024 0.165666 16.4833 1.62034C17.9031 3.01505 18.0108 5.27002 16.6587 6.7305C15.9023 7.54762 15.0517 8.43013 14.25 9.18182C12.7323 10.6049 9.5 13 9.5 13C9.5 13 6.26772 10.6049 4.75 9.18182C3.9483 8.43012 3.09773 7.5476 2.34124 6.73047C0.98916 5.27 1.0969 3.01503 2.51673 1.62033C3.99763 0.165646 6.37096 0.165634 7.85187 1.6203Z" stroke="black"/>
+                                    </svg>
+                                    3406878
+                                </span>
+                               </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="search-item__all justify-content-center align-items-center">Показать все результаты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End header -->
+
+
+
+
+    <div class="footer max-width">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-item d-flex justify-content-center justify-content-sm-between flex-column flex-md-row text-center align-items-center align-content-center">
+                        <a href="../index.html" class="d-flex align-items-center">
+                            <img loading="lazy" src="../assets/img/png/logo.png" alt="logo.png" class="me-2">
+                            <div class="">
+                                <p class="header-logo__title">Книжный мир</p>
+                                <p class="header-logo__title-sub">Здесь находятся все книги!</p>
+                            </div>
+                        </a>
+                        <ul class="d-flex align-items-center my-3 my-md-0 justify-content-between justify-content-md-start">
+                            <li class="footer-list"><a href="#" class="footer-list__link">Жанры</a></li>
+                            <li class="footer-list"><a href="#" class="footer-list__link">Книги</a></li>
+                            <li class="footer-list"><a href="#" class="footer-list__link">Аудиокниги</a></li>
+                            <li class="footer-list"><a href="#" class="footer-list__link">Топ книг</a></li>
+                        </ul>
+                        
+                        <a href="#" class="footer__my-library d-flex justify-content-center align-items-center w-auto transition hover-bg">
+                            <svg class="me-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_46906_6)">
+                                <rect x="1" y="1" width="4" height="16" stroke="black" stroke-linejoin="round"/>
+                                <rect x="7" y="4" width="3" height="13" stroke="black" stroke-linejoin="round"/>
+                                <rect x="11.5273" y="8.28711" width="2.31824" height="9.14113" transform="rotate(-20 11.5273 8.28711)" stroke="black" stroke-linejoin="round"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.35566 4C2.55209 4 2.71132 4.16842 2.71132 4.37618V8.51417C2.71132 8.72193 2.55209 8.89035 2.35566 8.89035C2.15924 8.89035 2 8.72193 2 8.51417V4.37618C2 4.16842 2.15924 4 2.35566 4ZM3.60048 4C3.7969 4 3.95614 4.16842 3.95614 4.37618V6.82136C3.95614 7.02911 3.7969 7.19754 3.60048 7.19754C3.40405 7.19754 3.24482 7.02911 3.24482 6.82136V4.37618C3.24482 4.16842 3.40405 4 3.60048 4Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.39123 11.8682C2.17516 11.8682 2 11.9692 2 12.0939V14.5767C2 14.7013 2.17516 14.8024 2.39123 14.8024H3.56491C3.78098 14.8024 3.95614 14.7013 3.95614 14.5767V12.0939C3.95614 11.9692 3.78098 11.8682 3.56491 11.8682H2.39123Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_46906_6">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            Моя библиотека
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 footer-sub-info d-flex justify-content-between align-items-center flex-column flex-md-row">
+                    <p class="">2022 г. Книжный мир. Все права защищены</p>
+                    <a href="#" class="footer-sub-info__link my-2 my-sm-0">Политика конфиденциальности</a>
+                    <a href="#" class="footer-sub-info__link mb-2 mb-sm-0">Пользовательское соглашение</a>
+                    <p class="">Сделано в <span class="text-black fw-bold brend">Brand & Code</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End footer -->
+
+    
+    <script src="../assets/js/header.js"></script>
+</body>
+</html>
