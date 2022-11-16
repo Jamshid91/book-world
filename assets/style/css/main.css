@@ -1499,11 +1499,11 @@ input {
 .authors-item-img {
   position: absolute;
   top: -100px;
-  left: 5px;
+  left: 0;
 }
 
 .authors-item-img img {
-  width: 33%;
+  width: 28%;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   -o-object-fit: contain;
