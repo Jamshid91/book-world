@@ -5,3 +5,393 @@
         }
     }
 }
+
+@media (max-width: 992px) {
+    .header {
+        .header-burger {
+            width: 30%;
+        }
+        &__my-library {
+            max-width: 100%;
+            margin: 0;
+            margin-top: 25px;
+            font-size: 16px;
+        }
+        &-list {
+            font-size: 18px;
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+        &-logo {
+            width: 40%;
+            img {
+                width: 32px;
+            }
+            &__title {
+                font-size: 12px;
+                line-height: 16px;
+            }
+            &__title-sub {
+                font-size: 6px;
+                line-height: 10px;
+            }
+        }
+        &-right {
+            width: 30%;
+        }
+        &__signUp {
+            padding: 6px;
+            width: auto;
+            height: auto;
+            border-radius: 50%;
+        }
+        &__user {
+            max-width: auto;
+            height: auto;
+            padding: 2px;
+            border-radius: 50%;
+            &-img {
+                width: 32px;
+                height: 32px;
+                object-position: center;
+            }
+        }
+        &-search {
+            &__btn {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+    .search {
+        &-title {
+            width: 88%;
+        }
+        .line {
+            display: none;
+        }
+        &__inp {
+            border-radius: 100px;
+            padding: 0 70px 0 10px;
+            height: 32px;
+        }
+        
+        .header-search {
+            padding: 5px;
+            .border {
+                padding: 2px;
+            }
+            .clear-search {
+                right: 0;
+                font-size: 10px;
+            }
+            &__close {
+                width: 32px;
+                height: 32px;
+                svg {
+                    width: 12px;
+                }
+            }
+        }
+        &-result {
+            font-size: 13px;
+            &-left {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            &-info {
+                width: 100%;
+            }
+        }
+        &-item {
+            &-info {
+                font-size: 12px;
+            }
+        }
+    }
+    // End header
+
+    
+.wrapper {
+    .container {
+        padding: 60px 20px 85px;
+    }
+    &__title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 20px;
+        margin: 15px 0 30px;
+    }
+    &-right {
+        img {
+            &:first-child {
+                width: 200px;
+            }
+        }
+    }
+}
+// End wrapper
+
+.books {
+    &__title {
+        font-size: 24px;
+        line-height: 26px;
+        margin: 0 !important;
+    }
+}
+
+.aside {
+    &__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+    &__all {
+        font-size: 12px;
+    }
+}
+// End aside
+
+
+.thematic {
+    &__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+    &__all {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+    .thematic-circle {
+        width: 280px;
+        height: 280px;
+    }
+    &-slider {
+        margin-top: 100px;
+        &__link {
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        &-info {
+            font-size: 12px;
+        }
+    }
+    .swiper-slide {
+        &:hover {
+            .img1 {
+                transform: rotate(0) translateX(10px);
+            }
+            .img2 {
+                transform: rotate(0) translateX(-70px);
+                width: 90%;
+            }
+            .img3 {
+               transform: translate(-60px, 0px);
+               width: 80%;
+            }
+        }
+
+    }
+}
+// End thematic
+
+    
+.authors {
+    padding: 50px 0;
+    &__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+    &__all {
+        font-size: 12px;
+        padding: 8.5px 20px;
+    }
+    &-item {
+        padding: 80px 10px 20px;
+        &__link {
+            font-size: 16px;
+        }
+    }
+
+}
+// End authors
+}
+
+@media (max-width: 768px) {
+    .books {
+        position: relative;
+        padding-bottom: 80px;
+        .mobile_pagination {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &__title {
+            font-size: 24px;
+            margin-right: 50px;
+        }
+        &__all {
+            font-size: 12px;
+        }
+    }
+    // End books
+
+    .smells {
+        .row {
+            padding: 30px 0;
+        }
+        &-circle {
+            width: 300px;
+            height: 300px;
+            img {
+                width: 200px;
+            }
+        }
+        &__title {
+            font-size: 24px;
+        }
+        &-text {
+            font-size: 16px;
+            line-height: 20px;
+            padding: 20px 0;
+            margin: 20px 0;
+        }
+        &__link {
+            margin-bottom: 50px;
+            display: inline-block;
+        }
+    }
+    // End smells
+
+    .bookshelves {
+        margin-top: 30px;
+        &__title {
+            font-size: 24px;
+            line-height: 26px;
+            margin-right: 0;
+        }
+        &__all {
+            font-size: 12px;
+            width: 165px;
+        }
+    }
+    // End bookshelves
+    .authors {
+        &-item {
+            width: 49%;
+            padding-top: 100px;
+        }
+    
+    }
+    // End authors
+    .footer {
+        &-item {
+            padding: 10px 20px;
+        }
+        ul {
+            width: 100%;
+        }
+        &-list {
+            margin-right: 0;
+        }
+    
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 80px;
+    }
+    .wrapper {
+        .container {
+            padding: 30px 20px 50px;
+            text-align: center;
+        }
+        &__title {
+            font-size: 24px;
+            line-height: 26px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 15px 0 30px;
+        }
+        &__link {
+            padding: 10px 30px;
+        }
+        &-right {
+            img {
+                &:first-child {
+                    width: 220px;
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+    // End wrapper
+    
+
+    
+
+    .bookshelves {
+        &-left {
+            width: 100%;
+            height: 220px;
+        }
+        &_card {
+            padding: 15px 10px;
+        }
+        &-right {
+            width: 100%;
+            &-item {
+                width: 100%;
+                height: 220px;
+                margin-top: 10px;
+                &:nth-child(1) {
+                    margin-bottom: 0;
+                }
+            }
+    
+        }
+    }
+    // End bookshelves
+
+    .aside {
+        &-right {
+            &-item {
+                padding: 10px;
+                &__info {
+                    font-size: 12px;
+                }
+                &__img {
+                    width: 100px;
+                }
+            }
+            &__user {
+                margin-right: 5px;
+            }
+            &-user__name {
+                font-size: 14px;
+            }
+            &-user__date {
+                font-size: 12px;
+            }
+        }
+    }
+    // End aside
+    
+    .authors {
+        &-item {
+            width: 100%;
+            padding-top: 120px;
+        }
+    
+    }
+    // End authors
+}
+

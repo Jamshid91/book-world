@@ -1,14 +1,29 @@
-const favorites = document.querySelectorAll('.favorite'),      
+const headerBurger = document.querySelector('.header-burger'),
+      menu = document.querySelector('.menu'),
+      menuClose = document.querySelector('.menu-close'),
+      favorites = document.querySelectorAll('.favorite'),      
       header = document.querySelector('.header'),
       search = document.querySelector('.search'),
       body = document.querySelector('body'),
-      headerSearch = document.querySelector('.header-search__btn'),
+      headerSearch = document.querySelectorAll('.header-search__btn'),
       searchInp = document.querySelector('.search__inp'),
       clearSearchBtn = document.querySelector('.clear-search'),
       searchClose = document.querySelector('.header-search__close'),
       resultTitle = document.querySelector('.search-result__text'),
       searchItemAll = document.querySelector('.search-item__all'),
       searchResults = document.querySelectorAll('.search-result__title');
+
+
+
+      headerBurger.addEventListener('click', ()=> {
+        menu.classList.add('showMenu');
+        body.classList.add('overflow-hidden'); 
+    });
+    
+    menuClose.addEventListener('click', ()=> {
+        menu.classList.remove('showMenu');
+        body.classList.remove('overflow-hidden'); 
+    });
 
 
 let lastScrollTop = 0;
@@ -76,11 +91,13 @@ clearSearchBtn.addEventListener('click', () => {
   });
 });
 
+headerSearch.forEach(btn => {
+  btn.addEventListener('click', () => {
+    search.classList.add('showSearch');
+    body.classList.add('overflow-hidden');
+  });
+})
 
-headerSearch.addEventListener('click', () => {
-  search.classList.add('showSearch');
-  body.classList.add('overflow-hidden');
-});
 
 searchClose.addEventListener('click', () => {
   search.classList.remove('showSearch');
@@ -119,10 +136,12 @@ const popular = new Swiper('.popular-slider', {
     
   breakpoints: {
       320: {
-          slidesPerView: 1.2,
+          slidesPerView: 1.5,
+              loop: true,
       },
       576: {
           slidesPerView: 2.2,
+              loop: false,
       },
       768: {
           slidesPerView: 3.2,
@@ -155,7 +174,7 @@ const bestsellers = new Swiper('.bestsellers-slider', {
       
     breakpoints: {
         320: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.5,
         },
         576: {
             slidesPerView: 2.2,
@@ -238,19 +257,19 @@ const bestsellers = new Swiper('.bestsellers-slider', {
         spaceBetween: 50,
 
               centeredSlides: true,
-      lazyLoading: true,
-      loop: true,
+              lazyLoading: true,
+              loop: true,
 
               
     breakpoints: {
       320: {
-          slidesPerView: 1,
+          slidesPerView: 1.8,
       },
       576: {
-          slidesPerView: 2,
+          slidesPerView: 3,
       },
       768: {
-          slidesPerView: 3,
+          slidesPerView: 3.5,
       },
       992: {
           slidesPerView: 5,
