@@ -437,6 +437,7 @@ input {
   -webkit-transition: .3s all;
   -o-transition: .3s all;
   transition: .3s all;
+  cursor: pointer;
 }
 
 .search .header-search__close:hover {
