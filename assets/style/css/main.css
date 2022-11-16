@@ -408,6 +408,7 @@ input {
   font-size: 14px;
   color: #000;
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .search .header-search .clear-search:hover {
