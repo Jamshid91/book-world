@@ -8,10 +8,11 @@
     <link rel="shortcut icon" href="assets/img/png/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/style/plugins/bootstrap.css">
     <link rel="stylesheet" href="assets/style/plugins/swiper.css">
+    <link rel="stylesheet" href="assets/style/plugins/cropper.css">
     <link rel="stylesheet" href="assets/style/css/main.css">
 </head>
 <body>
-    <header class="header w-100 position-fixed">
+    <header class="header w-100 position-fixed start-0">
         <div class="container">
             <div class="row">
                 <div class="col-12 d-none d-lg-flex align-items-center justify-content-between">
@@ -40,7 +41,7 @@
                             <li class="header-list"><a href="#">Жанры</a></li>
                         </ul>
                         <div class="header-logo d-flex justify-content-center">
-                            <a href="./index.html" class="d-flex align-items-center">
+                            <a href="index.html" class="d-flex align-items-center">
                                 <img loading="lazy" src="assets/img/png/logo.png" alt="logo.png" class="me-2">
                                 <div class="">
                                     <p class="header-logo__title">Книжный мир</p>
@@ -62,7 +63,7 @@
                                 </g>
                             </svg>
                         </button>
-                        <a href="#" class="header__signUp d-flex align-items-center justify-content-center w-auto transition">
+                        <a href="#" class="header__signUp d-none align-items-center justify-content-center w-auto transition">
                             <svg class="me-2" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_46885_2)">
                                 <circle cx="9.16287" cy="5.2449" r="4.2449" stroke="black"/>
@@ -78,13 +79,13 @@
                         </a>
 
                         <!-- после регистрации -->
-                        <a href="#" class="header__user d-none align-items-center transition w-auto">
-                            <img loading="lazy" src="assets/img/png/user.png" alt="" class="header__user-img rounded-circle me-2">
+                        <div class="header__user d-flex align-items-center transition w-auto">
+                            <img loading="lazy" src="assets/img/png/user.png" alt="" class="header__user-img cropper_img rounded-circle me-2">
                             <div class="d-flex">
                                 <span class="header__user-name me-1">Еремина</span>
                                 <span class="header__user-last-name">Екатерина</span>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
 
@@ -96,7 +97,7 @@
                         </svg>
                     </div>
                     <div class="header-logo d-flex justify-content-center">
-                        <a href="./index.html" class="d-flex align-items-center">
+                        <a href="index.html" class="d-flex align-items-center">
                             <img loading="lazy" src="assets/img/png/logo.png" alt="logo.png" class="me-1">
                             <div class="">
                                 <p class="header-logo__title">Книжный мир</p>
@@ -113,7 +114,7 @@
                                 </g>
                             </svg>
                         </button>
-                        <a href="#" class="header__signUp d-flex align-items-center justify-content-center w-auto transition">
+                        <a href="#" class="header__signUp d-none align-items-center justify-content-center w-auto transition">
                             <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_1_46885_4)">
                                 <circle cx="9.16287" cy="5.2449" r="4.2449" stroke="black"/>
@@ -128,9 +129,9 @@
                         </a>
                         
                         <!-- после регистрации -->
-                        <a href="#" class="header__user d-none align-items-center transition w-auto">
-                            <img loading="lazy" src="assets/img/png/user.png" alt="" class="header__user-img rounded-circle">
-                        </a>
+                        <div class="header__user d-flex align-items-center transition w-auto">
+                            <img loading="lazy" src="assets/img/png/user.png" alt="" class="header__user-img cropper_img rounded-circle">
+                        </div>
                     </div>
 
                 </div>
@@ -158,6 +159,152 @@
             </div>
         </div>
     </header>
+
+    <div class="user-info-sidebar">
+        <div class="user-info d-flex flex-column justify-content-between h-100">
+           <div class="">
+            <div class="text-end">
+                <svg class="close" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 1L10.8413 11.1587M10.8413 11.1587L1 21M10.8413 11.1587L20.5163 20.8337M10.8413 11.1587L1.46863 1.78609" stroke="#000" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="user-info-item">
+                <img src="assets/img/png/user.png" alt="" class="user-info__avatar cropper_img">
+                <p class="user-info__name title__page">Екатерина</p>
+                <p class="user-info__surname title__page">Еремина</p>
+                <p class="user-info__lastName title__page">Владиславовна</p>
+            </div>
+            <div class="user-info-btn" id="editPersonalDetailsBtn">Изменить личные данные</div>
+            <div class="user-info-btn" id="editPasswordBtn">Изменить пароль</div>
+           </div>
+           <button class="user-info__btn close">Выйти</button>
+        </div>
+    </div>
+
+    <!-- Изменить личные данные -->
+    <div class="change-personal-details d-none">
+        <div class="change-personal-details__close">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 1L10.8413 11.1587M10.8413 11.1587L1 21M10.8413 11.1587L20.5163 20.8337M10.8413 11.1587L1.46863 1.78609" stroke="#000" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 col-12">
+                    <form class="form-personal">
+                        <p class="title__page text-center">Изменить личные данные</p>
+                        <div class="edit-avatar d-flex align-items-center">
+                            <img src="assets/img/png/user.png" alt="" id="cropped" class="avatar cropper_img">
+                            <div class="edit-avatar__btn">
+                                <svg class="me-2" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7764 3.99609C15.0741 3.69849 15.0741 3.21598 14.7764 2.91827L12.0813 0.223197C11.7837 -0.074399 11.3012 -0.074399 11.0035 0.223197L1.57095 9.65575C1.27323 9.95347 1.27323 10.436 1.57095 10.7337L4.26602 13.4288C4.56362 13.7264 5.04626 13.7264 5.34384 13.4288L14.7764 3.99609ZM13.1597 3.45718L4.80519 11.8117L3.18807 10.1945L11.5425 1.84006L13.1597 3.45718Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.84732 3.45809L11.5423 6.15317C11.8396 6.45089 12.3229 6.45089 12.6202 6.15317C12.9178 5.85582 12.9178 5.37254 12.6202 5.07535L9.92514 2.38028C9.62779 2.08255 9.14451 2.08255 8.84732 2.38028C8.54959 2.67762 8.54959 3.1609 8.84732 3.45809Z" fill="black"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.38662 9.95402L0.0392761 13.9968C-0.0522236 14.2704 0.0189856 14.5726 0.223295 14.7765C0.427604 14.9809 0.729536 15.0522 1.00353 14.9607L5.04601 13.613C5.44506 13.48 5.66071 13.0481 5.52775 12.6487C5.39465 12.2496 4.9628 12.0339 4.56336 12.167L1.96743 13.0324L2.83264 10.4358C2.96562 10.0367 2.74995 9.60485 2.35051 9.47188C1.95146 9.33891 1.51961 9.55458 1.38664 9.95401L1.38662 9.95402Z" fill="black"/>
+                                </svg>
+                                Изменить фото профиля
+                            </div>
+                        </div>
+                        <label for="userName" class="form-personal__lab">
+                            Имя пользователя
+                            <input type="text" id="userName" class="form-personal__inp" name="Имя пользователя" placeholder="Введите ваше имя" required>
+                        </label>
+                        <label for="surName" class="form-personal__lab">
+                            Фамилия
+                            <input type="text" id="surName" class="form-personal__inp" name="Фамилия" placeholder="Введите ваше фамилия" required>
+                        </label>
+                        <label for="lastName" class="form-personal__lab">
+                            Отчество
+                            <input type="text" id="lastName" class="form-personal__inp" name="Отчество" placeholder="Введите ваше имя" required>
+                        </label>
+                        <label for="nickName" class="form-personal__lab">
+                            Ник
+                            <input type="text" id="nickName" class="form-personal__inp" name="Ник" placeholder="Введите ваше ник" required>
+                        </label>
+                        <label for="userEmail" class="form-personal__lab">
+                            E-mail
+                            <input type="email" id="userEmail" class="form-personal__inp" name="E-mail" placeholder="Введите ваше почта" required>
+                        </label>
+                        <label for="userPhone" class="form-personal__lab">
+                            Телефон
+                            <input type="tel" id="userPhone" class="form-personal__inp phone" name="Телефон" placeholder="Введите ваше телефон" required>
+                        </label>
+                        <div class="d-flex justify-content-center mt-5">
+                            <button type="submit" class="form-personal__btn">Сохранить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- modal avatar -->
+        <div class="modal-edit-avatar d-flex justify-content-center align-items-center d-none">
+            <div class="modal-edit-avatar-body">
+                <div class="result-avatar"></div>
+                <button class="modal-edit-avatar__close">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 1L10.8413 11.1587M10.8413 11.1587L1 21M10.8413 11.1587L20.5163 20.8337M10.8413 11.1587L1.46863 1.78609" stroke="white" stroke-linecap="round"/>
+                </svg>
+                </button>
+                <p class="title__page">Загрузить фото</p>
+                <div class="download-avatar result position-relative">
+                    <input type="file" id="uploadInput" accept=".png, .jpg, .jpeg" name="avatar"
+                    multiple />
+                <label for="uploadInput" class="d-flex justify-content-center align-items-center flex-column py-5">
+                    <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.2">
+                        <path d="M19.5989 9.64649C20.1885 9.64649 20.6665 9.1685 20.6665 8.57886C20.6665 7.98923 20.1885 7.51123 19.5989 7.51123C19.0092 7.51123 18.5312 7.98923 18.5312 8.57886C18.5312 9.1685 19.0092 9.64649 19.5989 9.64649Z" fill="black"/>
+                        <path d="M14.0753 8.30469C13.2307 8.30469 12.405 8.55515 11.7027 9.0244C11.0004 9.49365 10.4531 10.1606 10.1298 10.941C9.80661 11.7213 9.72204 12.58 9.88682 13.4084C10.0516 14.2368 10.4583 14.9977 11.0556 15.5949C11.6528 16.1922 12.4138 16.5989 13.2422 16.7637C14.0706 16.9285 14.9292 16.8439 15.7096 16.5207C16.4899 16.1974 17.1569 15.6501 17.6261 14.9478C18.0954 14.2455 18.3458 13.4198 18.3458 12.5752C18.3458 11.4426 17.8959 10.3564 17.095 9.5555C16.2941 8.75462 15.2079 8.30469 14.0753 8.30469ZM14.0753 14.7105C13.653 14.7105 13.2401 14.5852 12.889 14.3506C12.5379 14.116 12.2642 13.7825 12.1026 13.3923C11.941 13.0022 11.8987 12.5728 11.9811 12.1586C12.0634 11.7444 12.2668 11.364 12.5654 11.0654C12.8641 10.7667 13.2445 10.5634 13.6587 10.481C14.0729 10.3986 14.5023 10.4409 14.8924 10.6025C15.2826 10.7641 15.6161 11.0378 15.8507 11.3889C16.0853 11.7401 16.2106 12.1529 16.2106 12.5752C16.2106 13.1415 15.9856 13.6846 15.5852 14.0851C15.1847 14.4855 14.6416 14.7105 14.0753 14.7105Z" fill="black"/>
+                        <path d="M5.35938 1V8.30462" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M9.01172 4.65234L1.7071 4.65234" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M12.5808 4.3374H20.2925C21.9494 4.3374 23.2926 5.68055 23.2926 7.3374V18.0001C23.2926 19.6569 21.9494 21.0001 20.2926 21.0001H8.04297C6.38612 21.0001 5.04297 19.6569 5.04297 18.0001V12.272" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        </g>
+                    </svg>
+                    Перетащите сюда свое фото
+                </label>
+                    <div class="avatar-photo d-none">
+                        <img src="" alt="" id="avatarPhoto" class="">
+                    </div>
+                
+                </div>
+                <button class="save-avatar__btn">Загрузить</button>
+            </div>
+            <div class="modal-edit-avatar-body successfully_modal text-center d-none">
+                <button class="modal-edit-avatar__close">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 1L10.8413 11.1587M10.8413 11.1587L1 21M10.8413 11.1587L20.5163 20.8337M10.8413 11.1587L1.46863 1.78609" stroke="white" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <img src="assets/img/png/check.png" alt="">
+                <p class="title__page mt-3">Ваше фото успешно
+                    загружено</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Изменение пароля -->
+    <div class="change-password d-none">
+        <div class="change-password__close">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 1L10.8413 11.1587M10.8413 11.1587L1 21M10.8413 11.1587L20.5163 20.8337M10.8413 11.1587L1.46863 1.78609" stroke="#000" stroke-linecap="round"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 col-12">
+                    <p class="title__page text-center">Изменение пароля</p>
+                    <p class="change-password__text">Для получения нового пароля нужно вписать в поле ниже адрес электронной почты, указанный при регистрации</p>
+                    <form action="" class="">
+                        <label for="userEmail2" class="form-personal__lab">
+                            E-mail
+                            <input type="email" id="userEmail2" class="form-personal__inp" name="E-mail" placeholder="Введите ваше почта" required>
+                        </label>
+                        <div class="d-flex justify-content-center mt-5">
+                            <button type="submit" class="form-personal__btn">Восстановить пароль</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="menu">
         <div class="menu-close">
@@ -209,19 +356,19 @@
                                 </div>
                             </div>
                             <div class="line"></div>
-                            <a href="#" class="header-search-author d-none d-lg-flex">Автор</a>
-                            <a href="#" class="header-search-publishing-house d-none d-lg-block">Издательство</a>
-                            <a href="#" class="header-search-language d-none d-lg-block">Язык</a>
+                            <div class="mob_check-sort d-flex me-2">
+                                <input type="radio" class="search__rad" name="filter" id="author" checked>
+                                <label for="author" class="search__lab">Автор</label>
+                                <input type="radio" class="search__rad" name="filter" id="publishing">
+                                <label for="publishing" class="search__lab">Издательство</label>
+                                <input type="radio" class="search__rad" name="filter" id="language">
+                                <label for="language" class="search__lab">Язык</label>
+                            </div>
                             <div class="header-search__close">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M15 1L1 15M15 15L1 1" stroke="#797979"/>
                                 </svg>
                             </div>
-                        </div>
-                        <div class="d-flex justify-content-center align-items-center mt-1 d-lg-none">
-                            <a href="#" class="header-search-author d-flex">Автор</a>
-                            <a href="#" class="header-search-publishing-house">Издательство</a>
-                            <a href="#" class="header-search-language">Язык</a>
                         </div>
                     </div>
                     <div class="search-result">
@@ -1676,7 +1823,10 @@
     <!-- End footer -->
 
 
+    <script src="assets/js/plugins/jquery.js"></script>
     <script src="assets/js/plugins/swiper.js"></script>
+    <script src="assets/js/plugins/mask.js"></script>
+    <script src="assets/js/plugins/cropper.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/index.js"></script>
 </body>

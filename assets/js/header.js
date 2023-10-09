@@ -2,6 +2,9 @@ const headerBurger = document.querySelector('.header-burger'),
       menu = document.querySelector('.menu'),
       menuClose = document.querySelector('.menu-close'),     
       header = document.querySelector('.header'),
+      headerUsers = document.querySelectorAll('.header .header__user'),
+      userInfoSidebar = document.querySelector('.user-info-sidebar'),
+      userInfoSidebarClose = document.querySelectorAll('.user-info-sidebar .close'),
       search = document.querySelector('.search'),
       body = document.querySelector('body'),
       headerSearch = document.querySelectorAll('.header-search__btn'),
@@ -10,30 +13,117 @@ const headerBurger = document.querySelector('.header-burger'),
       searchClose = document.querySelector('.header-search__close'),
       resultTitle = document.querySelector('.search-result__text'),
       searchItemAll = document.querySelector('.search-item__all'),
-      searchResults = document.querySelectorAll('.search-result__title');
+      searchResults = document.querySelectorAll('.search-result__title'),
+      result = document.querySelector('.result-avatar'),
+      downloadAvatar = document.querySelector('.download-avatar'),
+      saveAvatar = document.querySelector('.save-avatar__btn'),
+      cropperImgs = document.querySelectorAll('.cropper_img'),
+      uploadAvatar = document.getElementById('uploadInput'),
+      editAvatarBtn = document.querySelector('.edit-avatar__btn'),
+      modalEditAvatarClose = document.querySelector('.modal-edit-avatar__close'),
+      modalEditAvatar = document.querySelector('.modal-edit-avatar'),
+      changePersonalDetailsClose = document.querySelector('.change-personal-details__close'),
+      changePersonalDetails = document.querySelector('.change-personal-details'),
+      changePassword = document.querySelector('.change-password'),
+      changePasswordClose = document.querySelector('.change-password__close'),
+      editPersonalDetailsBtn = document.getElementById('editPersonalDetailsBtn'),
+      editPasswordBtn = document.getElementById('editPasswordBtn')
 
 
 
-      headerBurger.addEventListener('click', ()=> {
-        menu.classList.add('showMenu');
-        body.classList.add('overflow-hidden'); 
+editPersonalDetailsBtn.addEventListener('click', () => {
+  changePersonalDetails.classList.remove('d-none')
+});
+
+changePersonalDetailsClose.addEventListener('click', () => {
+  changePersonalDetails.classList.add('d-none')
+});
+
+editPasswordBtn.addEventListener('click', () => {
+  changePassword.classList.remove('d-none')
+});
+
+changePasswordClose.addEventListener('click', () => {
+  changePassword.classList.add('d-none')
+});
+
+
+// Загрузить фото
+
+  editAvatarBtn.addEventListener('click', () => {
+    modalEditAvatar.classList.remove('d-none');
+    modalEditAvatar.children[0].classList.remove('d-none');
+    modalEditAvatar.children[1].classList.add('d-none');
+  });
+
+  modalEditAvatarClose.addEventListener('click', () => {
+    modalEditAvatar.classList.add('d-none')
+  });
+
+    let cropper = '';
+  
+    uploadAvatar.addEventListener('change', (e) => {
+    if (e.target.files.length) {
+        const reader = new FileReader();
+        reader.onload = (e)=> {
+        if(e.target.result){
+                    let img = document.getElementById('avatarPhoto');
+                    img.src = e.target.result
+                    img.parentElement.classList.remove('d-none');
+                    downloadAvatar.classList.add('border-0', 'rounded-0')
+                    cropper = new Cropper(img);
+        }
+        };
+        reader.readAsDataURL(e.target.files[0]);
+    }
+    });
+
+    saveAvatar.addEventListener('click',(e)=>{
+    e.preventDefault();
+    let imgSrc = cropper.getCroppedCanvas({
+        }).toDataURL();
+        cropperImgs.forEach(cropped => {
+          cropped.src = imgSrc;
+        });
+        
+        modalEditAvatar.children[0].classList.add('d-none');
+        modalEditAvatar.children[1].classList.remove('d-none');
     });
     
-    menuClose.addEventListener('click', ()=> {
-        menu.classList.remove('showMenu');
-        body.classList.remove('overflow-hidden'); 
-    });
 
+
+    headerBurger.addEventListener('click', ()=> {
+      menu.classList.add('showMenu');
+      body.classList.add('overflow-hidden'); 
+  });
+  
+  menuClose.addEventListener('click', ()=> {
+      menu.classList.remove('showMenu');
+      body.classList.remove('overflow-hidden'); 
+  });
+  
+headerUsers.forEach(headerUser => {
+  headerUser.addEventListener('click', () => {
+    userInfoSidebar.classList.add('showSidebar');
+    body.classList.add('overflow-hidden');
+  });
+})
+
+
+userInfoSidebarClose.forEach(close => {
+  close.addEventListener('click', () => {
+    userInfoSidebar.classList.remove('showSidebar');
+    body.classList.remove('overflow-hidden');
+  })
+})
 
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   if(scrollTop > lastScrollTop) {
-    header.style.top = '-150px'
-  } else {
-    header.style.top = '0'
     header.children[0].children[0].classList.add('shadow-sm')
+  } else {
   }
   lastScrollTop = scrollTop
   if(lastScrollTop == 0) {
@@ -106,5 +196,20 @@ window.onclick = function(e) {
       search.classList.remove('showSearch');
       body.classList.remove('overflow-hidden'); 
   }
+  if(e.target == userInfoSidebar) {
+    userInfoSidebar.classList.remove('showSidebar');
+    body.classList.remove('overflow-hidden');
+  }
+  if(e.target == menu){
+    menu.classList.remove('showMenu');
+    body.classList.remove('overflow-hidden'); 
+  }
+  if(e.target == modalEditAvatar) {
+    modalEditAvatar.classList.add('d-none')
+  }
 }
+
+$(document).ready(function () {
+  $(".phone").inputmask("+7 (999) 999-99-99");
+});
 

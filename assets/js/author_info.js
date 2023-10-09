@@ -1,41 +1,19 @@
-const favorites = document.querySelectorAll('.favorite');
+const authorInfo = document.querySelector('.author-info-item__texts'),
+      openAllInfo = document.querySelector('.open-allInfo-text');
 
-favorites.forEach(favorite => {
-  favorite.addEventListener('click', () => {
-    favorite.classList.toggle('favorite_check')
-  })
+let count = 0;
+
+openAllInfo.addEventListener('click', () => {
+    if(count == 0) {
+        authorInfo.parentElement.classList.add('showInfoText');
+        openAllInfo.children[0].textContent = 'Свернуть'
+        return count = 1;
+    } else {
+        authorInfo.parentElement.classList.remove('showInfoText');
+        openAllInfo.children[0].textContent = 'Читать полностью'
+        return count = 0;
+    }
 });
-
-const theBest = new Swiper('.theBest-slider', {
-    scrollbar: {
-      el: '.swiper-scrollbar',
-      draggable: true,
-    },
-
-    centeredSlides: true,
-    lazyLoading: true,
-    loop: true,
-    watchOverflow: true,
-    slidesPerView: 1,
-    spaceBetween: 40,
-    direction: 'horizontal',
-
-            
-  breakpoints: {
-    320: {
-        slidesPerView: 2.5,
-    },
-    576: {
-        slidesPerView: 4.5,
-    },
-    768: {
-        slidesPerView: 6.5,
-    },
-    992: {
-        slidesPerView: 8.5,
-    },
-}
-  });
 
 
 const watched = new Swiper('.watched-slider', {

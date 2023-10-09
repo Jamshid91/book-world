@@ -4,7 +4,7 @@ favorites.forEach(favorite => {
   favorite.addEventListener('click', () => {
     favorite.classList.toggle('favorite_check')
   })
-})
+});
 
 
 // Популярное
@@ -51,7 +51,7 @@ const bestsellers = new Swiper('.bestsellers-slider', {
         el: '.bestsellers-slide-pagination',
         type: 'fraction',
         renderFraction: function(currentClass, tottalClass) {
-            return `<span class="' + ${currentClass} +'"></span> `+ ' из ' + `<span class="' + ${tottalClass} +'"></span> ` 
+            return `+ <span class="' + ${currentClass} +'"></span> `+ ' из ' + `<span class="' + ${tottalClass} +'"></span> ` 
         }
       },
 
@@ -61,12 +61,15 @@ const bestsellers = new Swiper('.bestsellers-slider', {
 
       watchOverflow: true,
       
-    breakpoints: {
+          
+      breakpoints: {
         320: {
             slidesPerView: 1.5,
+                loop: true,
         },
         576: {
             slidesPerView: 2.2,
+                loop: false,
         },
         768: {
             slidesPerView: 3.2,
